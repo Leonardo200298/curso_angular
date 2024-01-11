@@ -6,16 +6,20 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { PadreComponent } from './padre/padre.component';
 import { ContadorComponent } from './contador/contador.component';
+import { HijoComponent } from './hijo/hijo.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     PadreComponent,
-    ContadorComponent
+    ContadorComponent,
+    HijoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
