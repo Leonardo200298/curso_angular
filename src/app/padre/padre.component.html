@@ -1,9 +1,11 @@
 <br/>
 <!-- <app-hijo (mensajeDesdeHijo)="recibirMensaje($event)"/>
 <h2>El mensaje que recibi desde el hijo es {{reciboMensaje}}</h2> -->
-<h3 appEstiloHermanos>Mi nombre es: {{nombre}}</h3>
+<h3 appEstiloHermanos>Mi nombre es: {{nombre | miPipe}}</h3>
 <button (click)="saludar()">saludar</button>
 <button (click)="preguntar()">preguntar por hijo</button>
+
+<p>Fecha de hoy: {{fecha | date: 'short'}}</p>
 
 
 
