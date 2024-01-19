@@ -15,7 +15,7 @@ const routes: Routes = [
         component: ProductComponent
     },
     {
-        path: 'products/:productId',
+        path: 'products/:color/:productId',
         component: ProductDetailComponent
     },
     {
@@ -26,10 +26,7 @@ const routes: Routes = [
         path: '**',
         redirectTo: '',
         pathMatch: 'full'
-    }
-        
-       
-        
+    }   
 ];
 
 @NgModule({
