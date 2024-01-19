@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { ProductComponent } from './product/product.component';
 import { ContactComponent } from './contact/contact.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 
 
@@ -15,7 +16,8 @@ import { ContactComponent } from './contact/contact.component';
     AppComponent,
     HomeComponent,
     ProductComponent,
-    ContactComponent
+    ContactComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,
