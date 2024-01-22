@@ -15,7 +15,7 @@ const routes: Routes = [
         component: ProductComponent
     },
     {
-        path: 'products/:color/:productId',
+        path: 'products/:productId',
         component: ProductDetailComponent
     },
     {
