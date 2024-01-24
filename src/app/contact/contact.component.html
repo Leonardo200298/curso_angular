@@ -1,19 +1,21 @@
 <div class="container">
-    <form #miFormulario="ngForm" (ngSubmit)="enviar()">
+  <form [formGroup]="formularioContacto" (ngSubmit)="enviar()">
         
         <div class="mb-3">
             <label for="name" class="form-label">Name</label>
-            <input type="text" class="form-control" id="name"
-            [ngModelOptions]="{standalone: true}"
-            [(ngModel)]="usuario.nombre" required>
-            
+            <input [ngClass]="{'is-invalid': hasErrors('nombre', 'required') || hasErrors('nombre', 'minlength')}"
+            type="text" class="form-control" id="name" formControlName="nombre">
+            <div class="text-danger" *ngIf="hasErrors('nombre', 'required')">Nombre requerido</div>
+            <div class="text-danger" *ngIf="hasErrors('nombre', 'minlength')">El nombre debe tener mas de tres letras</div>
+
         </div>
         <div class="mb-3">
             <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email"
-            [ngModelOptions]="{standalone: true}"
-            [(ngModel)]="usuario.email" required>
-            
+            <input [ngClass]="{'is-invalid': hasErrors('email', 'email') || hasErrors('email', 'required')}"
+            type="email" class="form-control" id="email" formControlName="email">
+            <div class="text-danger" *ngIf="hasErrors('email', 'email')">Mail invalido</div>
+            <div class="text-danger" *ngIf="hasErrors('email', 'required')">Email requerido</div>
+
         </div>
         <button type="submit" class="btn btn-primary">Enviar</button>
     </form>
