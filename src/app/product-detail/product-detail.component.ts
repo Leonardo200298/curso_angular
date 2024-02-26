@@ -23,6 +23,6 @@ export class ProductDetailComponent implements OnInit{
         this.loading = false;
       })
       
-    }, 1500);
+    }, 1000);
   }
 }

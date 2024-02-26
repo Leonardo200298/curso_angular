@@ -16,4 +16,8 @@ export class ApiService {
   public getProducts():Observable<IProduct[]>{
     return this._httpClient.get<IProduct[]>(this.baseURL);
   }
+
+  public getProduct(id: number):Observable<IProduct[]>{
+    return this._httpClient.get<IProduct[]>(`${this.baseURL}/${id}`);
+  }
 }
